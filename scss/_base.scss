@@ -1,0 +1,32 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $ff;
+}
+
+.container {
+    padding: 0 20px;
+    max-width: $container;
+    margin-inline: auto;
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    &_primary {
+        @include text($ff, 600, 20px, 23px, $terciary);
+    }
+    &_secondary {
+        background: $primary;
+        border-radius: 22px;
+        padding: 10px 25px;
+        @include text($ff, 600, 20px, 23px, $white);
+    }
+}
+.material-icons {
+	cursor: pointer;
+}
