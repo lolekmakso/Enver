@@ -1,62 +1,124 @@
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px;
-	border-bottom: 1px solid $grey;
-
-	&__logo {
-		@include text($ff, 400, 16px, 19px, $darkpurple);
-	}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 20px;
 }
 
 .nav {
-	&__ul {
-		display: flex;
-		align-items: center;
-		gap: 20px;
+  display: flex;
 
-		@include tablet {
-			position: fixed;
-			width: 100%;
-			height: 100%;
-			overflow-y: auto;
-			background: $darkpurple;
-			left: 0;
-			top: 0;
-			color: #fff;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			transition: $transition;
-			transform: translateX(-120%);
-			&._active {
-				transform: translateX(0);
-			}
-			.nav__a {
-				font-size: 21px;
-				line-height: 29px;
-				color: #fff;
-			}
-			.icon-close {
-				position: absolute;
-				top: 20px;
-				right: 20px;
-			}
-		}
+  &__a {
+	@include text($ff, 400, 18px, 25px, rgba(255, 255, 255, 0.7));
+	transition: $transition;
+	&:hover{
+		color: #fff;
 	}
-
-	.icon-menu,
-	.icon-close {
-		display: none;
-
-		@include tablet {
-			display: inline-block;
-		}
+	&._active {
+	  color: #5454d4;
 	}
+  }
 
-	&__a {
-		@include text($ff, 400, 16px, 19px, $darkpurple);
-	}
+  &__ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include tablet {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      background: $darkpurple;
+      left: 0;
+      top: 0;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: $transition;
+      transform: translateX(-120%);
+
+      .nav__a {
+        font-size: 21px;
+        line-height: 29px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.icon-menu {
+  display: none;
+}
+
+@include tablet {
+  .icon-menu {
+    display: block;
+    flex: 0 0 30px;
+    height: 18px;
+    position: relative;
+    z-index: 5;
+    background: #000;
+  }
+
+  .icon-menu span,
+  .icon-menu::before,
+  .icon-menu::after {
+    content: "";
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: $transition;
+  }
+
+  .icon-menu::before {
+    top: 0;
+  }
+
+  .icon-menu::after {
+    bottom: 0;
+  }
+
+  .icon-menu span {
+    top: calc(50% - 1px);
+  }
+
+  .menu-open .icon-menu span {
+    width: 0;
+  }
+
+  .menu-open .icon-menu::before {
+    top: calc(50% - 1px);
+    transform: rotate(-45deg);
+  }
+
+  .menu-open .icon-menu::after {
+    bottom: calc(50% - 1px);
+    transform: rotate(45deg);
+  }
+
+  ._primary {
+    margin-left: auto;
+  }
+}
+
+.menu-open .nav__ul {
+  transform: translateX(0);
+}
+
+@include mobile {
+  .btn._primary {
+    padding: 8px 14px;
+  }
+
+  .header__logo {
+    width: 40px;
+    overflow: hidden;
+	transform: translateY(2px);
+  }
 }

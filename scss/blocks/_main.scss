@@ -1,0 +1,23 @@
+.main-screen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__info {
+  }
+
+  &__title {
+    @include text($ff-second, 700, 80px, 84px, $white);
+    max-width: 582px;
+  }
+
+  &__desc {
+  }
+
+  &__btn {
+  }
+
+  &__img {
+    flex-shrink: 0;
+  }
+}

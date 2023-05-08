@@ -1,32 +1,51 @@
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    font-family: $ff;
+  font-family: $ff;
+  background: #19191b;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .container {
-    padding: 0 20px;
-    max-width: $container;
-    margin-inline: auto;
+  padding: 0 20px;
+  max-width: $container;
+  margin-inline: auto;
 }
 
 .btn {
-    display: inline-block;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    &_primary {
-        @include text($ff, 600, 20px, 23px, $terciary);
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+
+  &._primary {
+    @include text($ff, 400, 16px, 22px, $white);
+    letter-spacing: -0.500211px;
+    padding: 12px 42px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background: transparent;
+    transition: $transition;
+    &:hover{
+        color: #19191b;
+        background: #ffffff;
     }
-    &_secondary {
-        background: $primary;
-        border-radius: 22px;
-        padding: 10px 25px;
-        @include text($ff, 600, 20px, 23px, $white);
-    }
+  }
+  &._secondary {
+    background: $primary;
+    border-radius: 22px;
+    padding: 10px 25px;
+    @include text($ff, 600, 20px, 23px, $white);
+  }
 }
 .material-icons {
-	cursor: pointer;
+  cursor: pointer;
+}
+
+button{
+    border: none;
 }
