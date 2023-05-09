@@ -30,22 +30,30 @@ body {
     border-radius: 5px;
     background: transparent;
     transition: $transition;
-    &:hover{
-        color: #19191b;
-        background: #ffffff;
+    &:hover {
+      color: #19191b;
+      background: #ffffff;
     }
   }
   &._secondary {
-    background: $primary;
-    border-radius: 22px;
-    padding: 10px 25px;
-    @include text($ff, 600, 20px, 23px, $white);
+    display: inline-flex;
+    text-align: center;
+    gap: 8px;
+    @include text($ff, 700, 20px, 27px, $white);
+    background: #5454d4;
+    border-radius: 4px;
+    padding: 16px 27px;
+    transition: $transition;
+
+    &:hover{
+      background: darken(#5454d4, 10%);
+    }
   }
 }
 .material-icons {
   cursor: pointer;
 }
 
-button{
-    border: none;
+button {
+  border: none;
 }

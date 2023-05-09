@@ -1,4 +1,10 @@
-function navToggle() {
-	var links = document.getElementById('navUl');
-	links.classList.toggle("_active");
+"use strict"
+
+document.addEventListener('click', documentClick);
+
+function documentClick(e) {
+	const targetItem  = e.target;
+	if (targetItem.closest('.icon-menu')){
+		document.documentElement.classList.toggle('menu-open');
+	}
 }
