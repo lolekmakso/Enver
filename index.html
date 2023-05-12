@@ -1,67 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="owl.carousel.css" />
+    <link rel="stylesheet" href="owl.theme.default.css" />
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+    <title>Starter</title>
+  </head>
 
-	<title>Starter</title>
-</head>
+  <body id="body">
+    <div class="spinner" id="spinner">
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
 
-<body>
-	<header class="header container">
-		<a href="#" class="header__logo"><img src="img/logo.png" alt="logo"></a>
-		<nav class="nav">
-			<ul class="nav__ul">
-				<li class="nav__li"><a href="#" class="nav__a _active">Home</a></li>
-				<li class="nav__li"><a href="#" class="nav__a">Servises</a></li>
-				<li class="nav__li"><a href="#" class="nav__a">Our Project</a></li>
-				<li class="nav__li"><a href="#" class="nav__a">About us</a></li>
-			</ul>
-		</nav>
-		<a href="#" class="btn _primary">Contact us</a>
-		<button class="icon-menu" type="button">
-			<span></span>
-		</button>
-	</header>
+    <header class="header container">
+      <a href="#" class="header__logo"><img src="img/logo.png" alt="logo" /></a>
+      <nav class="nav">
+        <ul class="nav__ul">
+          <li class="nav__li"><a href="#" class="nav__a _active">Home</a></li>
+          <li class="nav__li"><a href="#" class="nav__a">Servises</a></li>
+          <li class="nav__li"><a href="#" class="nav__a">Our Project</a></li>
+          <li class="nav__li"><a href="#" class="nav__a">About us</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn _primary">Contact us</a>
+      <button class="icon-menu" type="button">
+        <span></span>
+      </button>
+    </header>
 
-	<div class="main-screen container">
-		<div class="main-screen__info">
-			<div class="main-screen__title">Build Your Awesome Platform</div>
-			<div class="main-screen__desc">Enver studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.</div>
-			<div class="main-screen__btn">
-				<a href="#" class="btn _secondary">
-					<span>Our Services</span>
-					<img src="img/arrow.svg" alt="arrow">
-				</a>
-			</div>
-		</div>
-		<div class="main-screen__img">
-			<img src="img/user.png" alt="user">
-		</div>
-	</div>
+    <div class="main-screen container">
+      <div class="main-screen__info">
+        <div class="main-screen__title">Build Your Awesome Platform</div>
+        <div class="main-screen__desc">
+          Enver studio is a digital studio that offers several services such as
+          UI/UX Design to developers, we will provide the best service for those
+          of you who use our services.
+        </div>
+        <div class="main-screen__btn">
+          <a href="#" class="btn _secondary">
+            <span>Our Services</span>
+            <img src="img/arrow.svg" alt="arrow" />
+          </a>
+        </div>
+      </div>
+      <div class="main-screen__img">
+        <img src="img/user.png" alt="user" />
+      </div>
+    </div>
 
-	<div class="why container">
-		<div class="why__info">
-			<div class="why__title">Why Enver Is The Best Choice?</div>
-			<div class="why__desc">Watch this one minute video so you understand why you should use our services!</div>
-		</div>
-		<a href="#" class="why__img">
-			<img src="img/team.png" alt="team">
-		</a>
-	</div>
+    <div class="why container">
+      <div class="why__info">
+        <div class="why__title">Why Enver Is The Best Choice?</div>
+        <div class="why__desc" id="desc">
+          Watch this one minute video so you understand why you should use our
+          services!
+        </div>
+      </div>
+      <a onclick="checkSpinner()" class="why__img">
+        <img src="img/team.png" alt="team" />
+      </a>
+    </div>
 
+    <div class="service container">
+      <div class="service__title">The Service We Provide For You</div>
+      <div class="service__list">
+        <div class="service-item">
+          <div class="service-item__icon">
+            <img src="img/service/service1.svg" alt="service" />
+          </div>
+          <div class="service-item__title">Development</div>
+          <div class="service-item__desc">
+            Create a platform with the best and coolest quality from us.
+          </div>
+        </div>
 
+        <div class="service-item">
+          <div class="service-item__icon _serv-icon2">
+            <img src="img/service/service2.svg" alt="service" />
+          </div>
+          <div class="service-item__title">UI/UX Designer</div>
+          <div class="service-item__desc">
+            We provide UI/UX Design services, and of course with the best
+            quality
+          </div>
+        </div>
 
+        <div class="service-item">
+          <div class="service-item__icon _serv-icon3">
+            <img src="img/service/service3.svg" alt="service" />
+          </div>
+          <div class="service-item__title">Graphik Designer</div>
+          <div class="service-item__desc">
+            We provide Graphic Design services, with the best designers
+          </div>
+        </div>
 
-	<!-- SCRIPT -->
-	<script src="script.js"></script>
-</body>
+        <div class="service-item">
+          <div class="service-item__icon _serv-icon4">
+            <img src="img/service/service4.svg" alt="service" />
+          </div>
+          <div class="service-item__title">Motion Graphik</div>
+          <div class="service-item__desc">
+            Create a platform with the best and coolest quality from us.
+          </div>
+        </div>
 
+        <div class="service-item">
+          <div class="service-item__icon _serv-icon5">
+            <img src="img/service/service5.svg" alt="service" />
+          </div>
+          <div class="service-item__title">Photography</div>
+          <div class="service-item__desc">
+            We provide Photography services, and of course with the best quality
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-item__icon _serv-icon6">
+            <img src="img/service/service6.svg" alt="service" />
+          </div>
+          <div class="service-item__title">Videography</div>
+          <div class="service-item__desc">
+            Create a platform with the best and coolest quality from us.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project container">
+      <div class="project__title">Our Awesome Portofolio</div>
+
+      <div class="owl-carousel owl-theme project__list">
+        <div class="project__item">
+          <img src="img/portfolio/item1.png" alt="portfolio" />
+        </div>
+        <div class="project__item">
+          <img src="img/portfolio/item2.png" alt="portfolio" />
+        </div>
+        <div class="project__item">
+          <img src="img/portfolio/item3.png" alt="portfolio" />
+        </div>
+        <div class="project__item">
+          <img src="img/portfolio/item1.png" alt="portfolio" />
+        </div>
+        <div class="project__item">
+          <img src="img/portfolio/item2.png" alt="portfolio" />
+        </div>
+        <div class="project__item">
+          <img src="img/portfolio/item3.png" alt="portfolio" />
+        </div>
+        <div class="project__item">
+          <img src="img/portfolio/item1.png" alt="portfolio" />
+        </div>
+        <div class="project__item">
+          <img src="img/portfolio/item2.png" alt="portfolio" />
+        </div>
+        <div class="project__item">
+          <img src="img/portfolio/item3.png" alt="portfolio" />
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="container contact__container">
+        <div class="contact__text">
+          Contact us for the service you want to use
+        </div>
+        <div class="contact__btn">
+          <a href="#" class="btn _secondary">Contact us</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="header container footer">
+      <a href="#" class="header__logo"><img src="img/logo.png" alt="logo" /></a>
+      <nav class="nav">
+        <ul class="nav__ul">
+          <li class="nav__li">
+            <a href="#" class="nav__a _active">Support</a>
+          </li>
+          <li class="nav__li"><a href="#" class="nav__a">Privacy Policy</a></li>
+          <li class="nav__li">
+            <a href="#" class="nav__a">Terms and Conditions</a>
+          </li>
+        </ul>
+      </nav>
+      <span class="copyright">© 2020 Enver, All Rights Reserved</span>
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="owl.carousel.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,72 +1,18 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+.spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
 
-body {
-  font-family: $ff;
-  background: #19191b;
-  font-size: 16rem;
-  color: rgba(255, 255, 255, 0.7);
-}
 
-.container {
-  padding: 0 20rem;
-  max-width: $container;
-  margin-inline: auto;
-}
 
-.btn {
-  display: inline-block;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-
-  &._primary {
-    @include text($ff, 400, 16rem, 22rem, $white);
-    letter-spacing: -0.500211rem;
-    padding: 12rem 42rem;
-    border: 1rem solid #ffffff;
-    border-radius: 5rem;
-    background: transparent;
-    transition: $transition;
-    &:hover {
-      color: #19191b;
-      background: #ffffff;
-    }
+  &._active{
+    display: flex;
   }
-  &._secondary {
-    display: inline-flex;
-    text-align: center;
-    gap: 8rem;
-    @include text($ff, 700, 20rem, 27rem, $white);
-    background: #5454d4;
-    border-radius: 4rem;
-    padding: 16rem 27rem;
-    transition: $transition;
-
-    &:hover {
-      background: darken(#5454d4, 10%);
-    }
-
-    @include mobile {
-      font-size: 16rem;
-      line-height: 22rem;
-      padding: 12rem 21rem;
-    }
-  }
-}
-.material-icons {
-  cursor: pointer;
-}
-
-button {
-  border: none;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .lds-roller {

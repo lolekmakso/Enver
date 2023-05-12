@@ -2,30 +2,47 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 151px;
+  margin-bottom: 151rem;
+  overflow-x: hidden;
 
   @include tablet {
     flex-direction: column;
+    gap: 50rem;
+  }
+
+  @include mobile {
+    margin-bottom: 140rem;
   }
 
   &__title {
-    @include text($ff-second, 700, 80px, 84px, $white);
-    max-width: 582px;
-    margin-bottom: 24px;
+    @include text($ff-second, 700, 80rem, 84rem, $white);
+    max-width: 582rem;
+    margin-bottom: 24rem;
 
     @include tablet {
       max-width: 100%;
     }
+
+    @include mobile {
+      font-size: 42rem;
+      line-height: 150%;
+      margin-bottom: 30rem;
+    }
   }
 
   &__desc {
-    letter-spacing: -0.656526px;
-    @include text($ff, 400, 21px, 39px, rgba(255, 255, 255, 0.7));
-    max-width: 536px;
-    margin-bottom: 50px;
+    letter-spacing: -0.656526rem;
+    @include text($ff, 400, 21rem, 39rem, rgba(255, 255, 255, 0.7));
+    max-width: 536rem;
+    margin-bottom: 50rem;
 
     @include tablet {
       max-width: 100%;
+    }
+
+    @include mobile {
+      font-size: 16rem;
+      line-height: 150%;
     }
   }
 
@@ -33,7 +50,7 @@
     flex-shrink: 0;
 
     img {
-      transform: translate(80px);
+      transform: translate(80rem);
 
       @include tablet {
         max-width: 100%;
@@ -45,25 +62,282 @@
 }
 
 .why {
+  margin-bottom: 150rem;
+
+  @include mobile {
+    margin-bottom: 140rem;
+  }
   &__info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 50px;
+    gap: 24rem;
+    margin-bottom: 50rem;
+
+    @include mobile {
+      gap: 0rem;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title {
-    @include text($ff-second, 700, 60px, 70px, $white);
+    @include text($ff-second, 700, 60rem, 70rem, $white);
+
+    @include mobile {
+      font-size: 36rem;
+      line-height: 150%;
+      margin-bottom: 30rem;
+    }
   }
 
   &__desc {
-    @include text($ff, 400, 21px, 39px, rgba(255, 255, 255, 0.7));
-    letter-spacing: -0.656526px;
+    @include text($ff, 400, 21rem, 39rem, rgba(255, 255, 255, 0.7));
+    letter-spacing: -0.656526rem;
+
+    @include mobile {
+      font-size: 16rem;
+      line-height: 150%;
+    }
   }
 
   &__img {
     img {
       max-width: 100%;
     }
+  }
+}
+
+.service {
+  margin-bottom: 150rem;
+  &__title {
+    text-align: center;
+    max-width: 695rem;
+    margin-inline: auto;
+    margin-bottom: 50rem;
+    @include text($ff-second, 700, 60rem, 70rem, $white);
+
+    @include mobile {
+      font-size: 36rem;
+      line-height: 150%;
+      margin-bottom: 50rem;
+      text-align: left;
+    }
+  }
+
+  &__list {
+    padding: 48rem 43rem;
+    display: grid;
+    gap: 96rem 108rem;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include desktop-small {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include tablet-small {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.service-item {
+  &__icon {
+    width: 69rem;
+    height: 69rem;
+    margin-inline: auto;
+    background: rgba(84, 84, 212, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rem;
+    border-radius: 50%;
+
+    &._serv-icon2 {
+      background: rgba(240, 64, 55, 0.1);
+    }
+
+    &._serv-icon3 {
+      background: rgba(254, 220, 90, 0.1);
+    }
+
+    &._serv-icon4 {
+      background: rgba(254, 220, 90, 0.1);
+    }
+
+    &._serv-icon6 {
+      background: rgba(240, 64, 55, 0.1);
+    }
+  }
+
+  &__title {
+    text-align: center;
+    letter-spacing: -0.750316rem;
+    @include text($ff, 600, 28rem, 38rem, $white);
+    margin-bottom: 20rem;
+  }
+
+  &__desc {
+    text-align: center;
+    letter-spacing: -0.500211rem;
+    @include text($ff, 400, 20rem, 28rem, rgba(255, 255, 255, 0.7));
+  }
+}
+
+.project {
+  margin-bottom: 150rem;
+
+  @include mobile {
+    padding: 0;
+  }
+  &__title {
+    padding: 0 20px;
+    margin-bottom: 70rem;
+    @include text($ff-second, 800, 58rem, 79rem, $white);
+  }
+
+  &__list {
+    * {
+      transition: $transition;
+    }
+  }
+
+  &__item {
+    background: #1e1e20;
+    border-radius: 14rem;
+    padding: 24rem;
+  }
+}
+
+.owl-item.active {
+  @include min-mobile {
+    &:nth-child(3n + 3) {
+      transform: translateY(0);
+    }
+
+    &:nth-child(3n + 2) {
+      transform: translateY(50rem);
+    }
+
+    &:nth-child(3n) {
+      transform: translateY(116rem);
+    }
+  }
+}
+
+.owl-carousel .owl-stage-outer {
+  height: 417rem;
+  overflow-x: hidden;
+  overflow-y: initial;
+  @include tablet {
+    height: auto;
+  }
+
+  @include mobile {
+    height: unset;
+  }
+}
+
+.owl-theme .owl-dots .owl-dot {
+  span {
+    width: 8rem;
+    height: 8rem;
+    background: $dotsBg;
+    border-radius: 50%;
+  }
+
+  &.active span {
+    width: 16rem;
+    background: $primary;
+    border-radius: 10rem;
+  }
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 38.21px;
+  height: 38.21px;
+  background: rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    background: $primary;
+  }
+
+  &.disabled {
+    background: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  span {
+    font-size: 1px;
+    position: relative;
+    &::before {
+      content: "\e5cb";
+      font-family: "Material Icons";
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: "liga";
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}
+
+.owl-theme .owl-nav {
+  margin-top: 50px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  span::before {
+    content: "\e5cc";
+  }
+}
+
+.contact {
+  background: rgba(30, 30, 32, 0.5);
+  padding: 187rem 0;
+
+  @include mobile{
+    flex-direction: column;
+    gap: 50rem;
+    align-items: flex-start;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    max-width: 826rem;
+    @include text($ff-second, 700, 60rem, 66rem, $white);
+  }
+
+  &__btn {
+  }
+}
+
+.footer {
+  padding-bottom: 100rem;
+
+  &__copyright {
+    @include text($ff, 400, 16rem, 38rem, rgba(255, 255, 255, 0.7));
+    letter-spacing: -0.500211rem;
+  }
+
+  .nav {
+    transform: translateX(50rem);
   }
 }

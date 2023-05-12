@@ -1,9 +1,14 @@
-@import 'normalise';
-@import 'fonts';
-@import 'vars';
-@import 'mixins';
-@import 'base';
+html {
+  font-size: 1px;
+}
 
+@import "normalise";
+@import "fonts";
+@import "vars";
+@import "mixins";
+@import "base";
 
-@import 'blocks/header';
-@import 'blocks/main';
+@import "blocks/spinner";
+@import "blocks/header";
+@import "blocks/main";
+
