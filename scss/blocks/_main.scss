@@ -103,11 +103,20 @@
   }
 
   &__img {
+    // position: relative;
     img {
       max-width: 100%;
     }
   }
 }
+
+// .play {
+//   max-width: 100%;
+//   position: absolute;
+//   bottom: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
 
 .service {
   margin-bottom: 150rem;
@@ -308,21 +317,26 @@
   background: rgba(30, 30, 32, 0.5);
   padding: 187rem 0;
 
-  @include mobile{
-    flex-direction: column;
-    gap: 50rem;
-    align-items: flex-start;
-  }
-
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 50rem;
+      align-items: flex-start;
+    }
   }
 
   &__text {
     max-width: 826rem;
     @include text($ff-second, 700, 60rem, 66rem, $white);
+
+    @include mobile {
+      font-size: 36rem;
+      line-height: 150%;
+    }
   }
 
   &__btn {
@@ -332,12 +346,40 @@
 .footer {
   padding-bottom: 100rem;
 
+  @include tablet-small {
+    flex-direction: column;
+  }
+
   &__copyright {
     @include text($ff, 400, 16rem, 38rem, rgba(255, 255, 255, 0.7));
     letter-spacing: -0.500211rem;
   }
+}
 
-  .nav {
-    transform: translateX(50rem);
+.footer-nav {
+  transform: translateX(50rem);
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+  @include tablet-small {
+    transform: translateX(0rem);
+  }
+
+  &__ul {
+    display: flex;
+    gap: 40px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__a {
+    @include text($ff, 400, 18rem, 25rem, rgba(255, 255, 255, 0.7));
+    transition: $transition;
+    &:hover {
+      color: #fff;
+    }
   }
 }
